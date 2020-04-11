@@ -11,8 +11,7 @@ ADD . /usr/src/
 ## Step 3:
 # Install packages from requirements.txt
 RUN make install
-RUN wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 
-RUN chmod +x /bin/hadolint
+# hadolint ignore=DL3013
 
 ## Step 4:
 # Expose port 80
