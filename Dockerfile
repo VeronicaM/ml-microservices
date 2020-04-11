@@ -6,7 +6,7 @@ WORKDIR /usr/src/
 
 ## Step 2:
 # Copy source code to working directory
-ADD . /usr/src/
+COPY . /usr/src/
 
 ## Step 3:
 # Install packages from requirements.txt
