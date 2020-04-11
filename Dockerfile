@@ -10,7 +10,6 @@ COPY . /usr/src/
 
 ## Step 3:
 # Install packages from requirements.txt
-RUN python3 -m venv venv 
 RUN make install
 # hadolint ignore=DL3013
 
