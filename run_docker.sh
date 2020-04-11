@@ -11,4 +11,4 @@ docker build --tag ml-services:1.0 .
 docker image ls
 
 # Step 3: 
-docker run --publish 8080:80 ml-services:1.0
+docker run --publish 80:80 ml-services:1.0
