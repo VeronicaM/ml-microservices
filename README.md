@@ -12,6 +12,8 @@
 
 The API endpoint is setup with Flask in the app.py. The model is in the `model_data` folder. You can see a prediction result example in the `output_txt_files` folder. To get your own predictions setup and run the project with either Docker or Kubernetes and run `./make_prediction.sh` to hit the API endpoint with a customized HTTP request params. 
 
+**Note** This project is compatible wtih Python 3.7.5. This will not work with Python 3.8 due to incompatibilities in sklearn. You can manage your Python version using [pyenv](https://realpython.com/intro-to-pyenv/) 
+
 ## Setup the Environment
 
 * Create a virtualenv and activate it
