@@ -1,27 +1,16 @@
 [![CircleCI](https://circleci.com/gh/VeronicaM/ml-microservices/tree/master.svg?style=svg)](https://circleci.com/gh/VeronicaM/ml-microservices/tree/master)
 
 ## Project Overview
+ This Project is a Machine Learning Microservice API based on a pre-trained, `sklearn` model that has been trained to predict housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on. You can read more about the data, which was initially taken from Kaggle, on [the data source site](https://www.kaggle.com/c/boston-housing). 
+ 
+### Project Commands and Capabilities
 
-In this project, you will apply the skills you have acquired in this course to operationalize a Machine Learning Microservice API. 
+* **Lint**: Linting with pylint for python files and hadolint for Dockerfile. Can be run with the command `make lint` in the project root
+* **Containerization**: Dockerfile is based on a preconfigured  python:3.7.3-stretch docker image and allows you to run the main app in a containerized way through the command `./run_docker.sh` in the root folder.
+* **Uploading Docker** to DockerHub can be done through the command `./upload_docker.sh` in the root folder. Update the file to fill in your docker account name and image details
+* **Kubernetes**: You can run this API in Kubernetes for high availability containerization through the `./run_kubernetes.sh` command in the root folder
 
-You are given a pre-trained, `sklearn` model that has been trained to predict housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on. You can read more about the data, which was initially taken from Kaggle, on [the data source site](https://www.kaggle.com/c/boston-housing). This project tests your ability to operationalize a Python flask app—in a provided file, `app.py`—that serves out predictions (inference) about housing prices through API calls. This project could be extended to any pre-trained machine learning model, such as those for image recognition and data labeling.
-
-### Project Tasks
-
-Your project goal is to operationalize this working, machine learning microservice using [kubernetes](https://kubernetes.io/), which is an open-source system for automating the management of containerized applications. In this project you will:
-* Test your project code using linting
-* Complete a Dockerfile to containerize this application
-* Deploy your containerized application using Docker and make a prediction
-* Improve the log statements in the source code for this application
-* Configure Kubernetes and create a Kubernetes cluster
-* Deploy a container using Kubernetes and make a prediction
-* Upload a complete Github repo with CircleCI to indicate that your code has been tested
-
-You can find a detailed [project rubric, here](https://review.udacity.com/#!/rubrics/2576/view).
-
-**The final implementation of the project will showcase your abilities to operationalize production microservices.**
-
----
+The API endpoint is setup with Flask in the app.py. The model is in the `model_data` folder. You can see a prediction result example in the `output_txt_files` folder. To get your own predictions setup and run the project with either Docker or Kubernetes and run `./make_prediction.sh` to hit the API endpoint with a customized HTTP request params. 
 
 ## Setup the Environment
 
